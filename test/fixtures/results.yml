@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usn: MyString
+  course_code: MyString
+  cee_obtained: 1
+  see_obtained: 1
+  student: one
+  course: one
+
+two:
+  usn: MyString
+  course_code: MyString
+  cee_obtained: 1
+  see_obtained: 1
+  student: two
+  course: two
