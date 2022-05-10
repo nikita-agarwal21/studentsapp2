@@ -8,9 +8,11 @@ class ResultsController < ApplicationController
   
 
          @marks=Result.all.where("lower(usn) LIKE :search",search: "%#{@usn_id}%")
-         @courseids=@marks.map(&:course_id)
+         @courseids=@marks.map(&:course_code)
+          
          
-          @subs=Course.all.where(id: @courseids)
+
+          @subs=Course.all.where(course_code: @courseids)
 
 
           #@learners.each do |learner|
