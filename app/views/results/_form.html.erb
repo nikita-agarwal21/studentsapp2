@@ -12,6 +12,15 @@
   <% end %>
 
   <div>
+  <div>
+  <%= form.label :usn, style: "display: block" %>
+  <%= form.text_field :usn %>
+</div>
+
+<div>
+<%= form.label :course_code, style: "display: block" %>
+<%= form.text_field :course_code %>
+</div>
     <%= form.label :cee_obtained, style: "display: block" %>
     <%= form.text_field :cee_obtained %>
   </div>
@@ -21,15 +30,7 @@
     <%= form.text_field :see_obtained %>
   </div>
 
-  <div>
-    <%= form.label :see_obtained, style: "display: block" %>
-    <%= form.text_field :usn %>
-  </div>
-  
-  <div>
-  <%= form.label :see_obtained, style: "display: block" %>
-  <%= form.text_field :course_code %>
-  </div>
+
 
   <div>
     <%= form.label :course_id, style: "display: block" %>
