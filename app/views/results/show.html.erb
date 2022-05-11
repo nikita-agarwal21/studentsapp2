@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="jumbotron">
+ 
+  <p class="lead">
+  <%= @result.usn %>  |  
+  <%= @result.course_code %>  |  
+    
+    <%= @result.see_obtained %>  |  
+    <%= @result.cee_obtained %>
+   
+  </p>
+  <br/>
+  <%= link_to "Edit this result", edit_result_path(@result) , class:"btn btn-secondary"%> 
+  <%= link_to "Destroy this result", @result, method: :delete , data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+  
+  <%= link_to "Back to result", results_path , class:"btn btn-dark"%>
+
+</div>
