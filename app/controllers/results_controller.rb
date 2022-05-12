@@ -52,7 +52,7 @@ class ResultsController < ApplicationController
       @result.destroy
   
       respond_to do |format|
-        format.html { redirect_to results_url, notice: "resultt was successfully destroyed." }
+        format.html { redirect_to results_url, notice: "result was successfully destroyed." }
         format.json { head :no_content }
       end
     end
