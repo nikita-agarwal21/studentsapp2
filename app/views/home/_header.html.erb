@@ -13,6 +13,11 @@
           <%= link_to 'about us', home_about_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
+           <%= link_to 'check result ', checkres_checkresult_path, class:"nav-link"%>
+        </li> 
+
+      <% if admin_signed_in? %>
+        <li class="nav-item">
           <%= link_to 'students list', students_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
@@ -28,8 +33,24 @@
             <%= link_to 'result ', results_path, class:"nav-link"%>
         </li> 
         <li class="nav-item">
-            <%= link_to 'check result ', checkres_checkresult_path, class:"nav-link"%>
-        </li>     
+          <%= link_to 'sign out ', destroy_admin_session_path,method: :delete, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+           <%= link_to 'edit profile ', edit_admin_registration_path, class:"nav-link"%>
+        </li> 
+
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'sign up ', new_admin_registration_path, class:"nav-link"%>
+        </li> 
+        <li class="nav-item">
+           <%= link_to 'sign in ', new_admin_session_path, class:"nav-link"%>
+        </li> 
+      <% end %> 
+
+        <li class="nav-item">
+          <%= link_to 'check  ', checkres_check_path, class:"nav-link"%>
+        </li> 
     </ul>
     
   </div>

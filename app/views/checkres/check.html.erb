@@ -1,0 +1,50 @@
+
+<%= form_tag(checkres_check_path, :method=>"get" )do %>
+   <%= label_tag(:search, "enter usn:")%>
+   <%= text_field_tag :search, params[:search] %>
+   <%= submit_tag("search", :usn=>nil)%>  
+<% end %>
+
+
+
+<% if @usn_id%>
+
+<h1>usn</h1>   <%= @learner.usn%>
+<h2>name</h2> <%= @learner.name%>
+ 
+
+
+
+
+
+
+<div class="table-responsive col-md-6">
+ 
+  <table class="table table-bordered">
+
+    <tr><th> course code</th><th>course name</th><th> total</th><th>remarks</th></tr>
+
+    <%@marks.each do|mark|%>
+        <tr>
+       <td><%= mark.course.course_code%></td><td><%= mark.course.course_name%></td>
+
+     <% @cee=mark.cee_obtained%>
+      <% @see=mark.see_obtained%>
+
+      <% @total= @cee+@see%>
+      <td><%=@total%></td>
+
+      <%if @total > 45 %>
+            <td>  <%= "pass"%></td>
+      <%else %>
+            <td>  <%= "fail"%></td>
+      <%end%>
+
+      </tr>
+
+    <%end%>
+  </table>
+
+
+</div>
+<%end%>

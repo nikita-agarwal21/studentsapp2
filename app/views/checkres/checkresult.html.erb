@@ -6,7 +6,7 @@
 <% end %>
 
 
-
+<% if @usn_id%>
 
 <%@learners.each do |learner|%>
     <h1>usn</h1>   <%= learner.usn%>
@@ -58,6 +58,7 @@
   
   </div>
 </div>
+<%end%>
 
 
 
